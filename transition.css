@@ -1,0 +1,22 @@
+body {
+    background-color: lightblue;
+    text-align: center;
+    position: relative;
+}
+.circle {
+    padding: 42px 0;
+    border-radius: 60px;
+    width: 100px;
+    color: #fff;
+    background-color: pink;
+    margin: 60px 0;
+    position: absolute;
+    top: 250px;
+    left: 550px;
+    transition: background-color 1s, transform 1s 1s ease-in;
+    cursor: pointer;
+}
+.circle:hover {
+    background-color: salmon;
+    transform: rotate(360deg);
+}
