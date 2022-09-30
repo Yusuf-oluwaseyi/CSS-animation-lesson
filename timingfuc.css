@@ -48,17 +48,19 @@ html, body{
     animation-iteration-count: infinite;
     animation-fill-mode: both;
     animation-name: jump;
+    /* time function get @ cubic-beizer.cm */
+    animation-timing-function: cubic-bezier(.51,.14,.11,.94);
   }
   .luigi {
     position: absolute;
     left: 0;
     top: 50px;
     animation-name: drive;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-fill-mode: both;
-    /* Using the direction on luigi, in this case made hi reverse, others are (reverse-alternative, alternative) */
-    animation-direction: reverse;
+    /* time function */
+    animation-timing-function: ease-in;
   }
 
   /* Keyframe */
@@ -67,7 +69,6 @@ html, body{
     to {transform: translateX(1500px)}
   }
   @keyframes jump {
-    /* combining two transform together to make the bike raised */
     from {transform: translateX(-600px), translateX(500px) rotateZ(-25deg)}
     to {transform: translateX(1500px) rotateZ(-25deg)}
   }
