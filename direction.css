@@ -1,0 +1,72 @@
+html, body{
+    height: 100%;
+    width:100%;
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  .grass, .sky, .road{
+    position: relative;
+  }
+  
+  .sky{
+    height: 40%;
+    background: skyblue;
+  }
+  
+  .grass{
+    height: 30%;
+    background: seagreen;
+  }
+  
+  .road{
+    height: 30%;
+    background: dimgrey;
+    box-sizing: border-box;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid grey;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .lines{
+    box-sizing: border-box;
+    border: 5px dashed #fff;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 45%;
+    z-index: -1;
+  }
+
+  /* Things/ elements to be animated */
+  .mario {
+    position: absolute;
+    left: 0;
+    top: -70px;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-name: jump;
+  }
+  .luigi {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    animation-name: drive;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-direction: reverse;
+  }
+
+  /* Keyframe */
+  @keyframes drive {
+    from {transform: translateX(-600px)}
+    to {transform: translateX(1500px)}
+  }
+  @keyframes jump {
+    /* combining two transform together to make the bike raised */
+    from {transform: translateX(-600px), translateX(500px) rotateZ(-25deg)}
+    to {transform: translateX(1500px) rotateZ(-25deg)}
+  }
