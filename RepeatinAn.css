@@ -46,6 +46,12 @@ html, body{
     top: -70px;
     animation-name: drive;
     animation-duration: 5s;
+    /* fill mode, which tells the css prop to stay where you want it to be. Usingg the animation-fill-mode */
+    animation-iteration-count: 5;/* This tell the animation how many times to repeat (5 here) */
+    animation-fill-mode: forwards; /* This tells the keyframes animation where to stay(here (drive) - forward)*/
+    /* (other fill-mode are) */
+    /* both, backwards */
+    animation-delay: 2s; /*delays the time before the animation starts */
   }
 
   /* Keyframe */
